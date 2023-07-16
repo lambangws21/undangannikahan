@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Nikahan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- simplycountdown -->
+    <script src="countdown/simplyCountdown.min.js"></script>
+  </head>
+  <body>
+    <section id="hero" class="hero w-100 h-100 mx-auto p-3 text-center flex justify-center items-center">
+      <main>
+        <h4 class="text-4xl text-slate-50 font-semibold">Kepada Bapak/Ibu/Saudara/i</h4>
+        <h1 class="text-8xl font-bold text-slate-100">Habbab dan Tinny</h1>
+        <p class="text-3xl mb-5 text-slate-100">Akan melangsungkan resepsi pernikan dalam:</p>
+        <div class="simply-countdown text-white items-center justify-center flex gap-2 mb-5"></div>
+        <a
+          href="#undangan"
+          class="btn p-2 h-3 w-9 bg-pink-500 mt-10 rounded-xl text-fuchsia-50 hover:bg-pink-50 hover:text-black"
+          >Lihat Undangan</a
+        >
+      </main>
+    </section>
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2023, // required
+        month: 9, // required
+        day: 28, // required
+        hours: 9, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "Hari", plural: "hari" },
+          hours: { singular: "Jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+
+        onEnd: function () {
+          alert("Sedang Berlangsung!");
+        },
+      });
+    </script>
+  </body>
+</html>
